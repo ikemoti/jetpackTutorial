@@ -14,25 +14,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ComposeTutorialTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
-            }
+            Greeting("Android")
         }
     }
 }
 
 @Composable
+
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text (text = "Hello $name!")
+}
+@Preview
+@Composable
+fun PreviewGreeting() {
+    Greeting("Android")
 }
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    ComposeTutorialTheme {
-        Greeting("Android")
-    }
-}
+
